@@ -31,5 +31,7 @@ X = [ones(m, 1), X];
 % Initialize fitting parameters
 initial_theta = zeros(n + 1, 1);
 
-
+% Set regularization parameter lambda to 1
 lambda = 1;
+
+[cost, grad] = costFunctionReg(initial_theta, X, y, lambda);
